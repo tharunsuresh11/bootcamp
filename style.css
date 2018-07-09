@@ -1,0 +1,72 @@
+body{
+    background-image: url(paper.jpg);
+    background-size: cover;
+    margin-right: auto;
+
+
+
+}
+h1 {
+  text-align: center;
+  color: red;
+}
+.container img  {
+  width: 100px;
+  height: 100px;
+
+  float: right;
+ }
+  .container {
+    background-color: #6eccbc;
+    border-radius: 25px;
+    padding: 10px;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 10px;
+}
+.lists {
+  background-color: #6eccbc;
+
+  border-radius: 25px;
+  padding: 10px;
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-bottom: 10px;
+
+}
+ #head2 {
+   background-image: url(buil.jpg);
+   background-size: contain;
+   border-radius: 25px;
+   padding: 10px;
+   margin-left: 80px;
+   margin-right: 80px;
+   margin-bottom: 10px;
+
+ }
+ .head3{
+   background-color: #6eccbc;
+ border-radius: 25px;
+ padding: 10px;
+ margin-left: 80px;
+ margin-right: 80px;
+ margin-bottom: 10px;
+   }
+   .gallery {
+     margin: 5px;
+    border: 1px solid #ccc;
+    float: right;
+    width: 180px;
+   }
+    .gallery img {
+      margin-left: 0px;
+     border: 1px solid #ccc;
+     width: 180px;
+     height: auto;
+     border-radius: 15px;
+
+   }
+   .desc {
+    padding: 15px;
+    text-align: center;
+}
