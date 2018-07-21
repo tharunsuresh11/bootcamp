@@ -1,0 +1,26 @@
+.con {
+  background-color: #f7747c;
+  border-radius: 25px;
+  padding: 40px;
+  margin-bottom: 80px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.con h1 {
+  text-align: center;
+
+
+  color: white;
+}
+.inputs {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+.row {
+  text-align: center;
+}
+.btn {
+  margin-left: 10px;
+  margin-bottom: 5px;
+}

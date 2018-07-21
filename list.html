@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+<link rel="stylesheet" href="list.css">
+    <title></title>
+  </head>
+  <body>
+
+
+
+
+    <div id="app">
+      <div class="con">
+  <h1>To Do</h1>
+      <div class="inputs">  <input type="text" name="" v-model="newone" placeholder="Enter the task" ><button @click="addToArray1()">Add</button> </div>
+</div>
+        <div class="container">
+        <div class="row">
+      <div class="col-12 col-md-6">
+
+      <h3>Incomplete task</h3>
+<ul>
+  <li v-for="(item,index) in mylist" >{{item}}<button class="btn btn-success" @click="addToArray2(item,index)"><i class="fa fa-check"></i></button</li>
+</ul> </div>
+<div class="col-12 col-md-6">
+      <h3>Completed task</h3>
+      <ul>
+        <li v-for="(item,index) in completedlist">{{item}}<button class="btn btn-primary" @click="addToArray(item,index)"><i class="fa fa-times"></i></button>
+          <button  class="btn btn-danger" @click="deletes(index)"><i class="fa fa-trash"></i></button></li>
+      </ul>
+</div>
+
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="vue.js"></script>
+<script>
+new Vue ({
+  el : "#app",
+  data : {
+
+    newone :"",
+    mylist : ["milk","butter"] ,
+    completedlist : ["biscuits"]
+     },
+
+
+    methods : {
+        addToArray1: function() {
+          if (this.newone) {
+            this.mylist.push(this.newone)
+            swal ({
+              title : "Task added!",
+              text : "Added a new task",
+              icon : "success"
+            })}
+            else {
+              swal({
+                title : "Warning!",
+                text : "Task field is empty",
+                icon : "warning"
+              })
+            }
+            this.newone=""
+        },
+
+
+       addToArray2: function(item,index) {
+         this.completedlist.push(item)
+         Vue.delete(this.mylist, index);
+
+       },
+        addToArray: function(item,index) {
+        this.mylist.push(item)
+        Vue.delete(this.completedlist, index); },
+
+        deletes : function(index) {
+            Vue.delete(this.completedlist, index);
+        }
+    }
+
+})
+</script>
+  </body>
+</html>
